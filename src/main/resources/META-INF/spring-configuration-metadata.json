@@ -1,0 +1,83 @@
+{
+  "groups": [
+    {
+      "name": "hunter",
+      "type": "me.olook.proxyhunter.ProxyHunterProperties",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties"
+    },
+    {
+      "name": "hunter.pool",
+      "type": "me.olook.proxyhunter.ProxyHunterProperties$Pool",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties",
+      "sourceMethod": "getPool()"
+    },
+    {
+      "name": "hunter.sentry",
+      "type": "me.olook.proxyhunter.ProxyHunterProperties$Sentry",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties",
+      "sourceMethod": "getSentry()"
+    },
+    {
+      "name": "hunter.task",
+      "type": "me.olook.proxyhunter.ProxyHunterProperties$Task",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties",
+      "sourceMethod": "getTask()"
+    },
+    {
+      "name": "hunter.vpn",
+      "type": "me.olook.proxyhunter.ProxyHunterProperties$Vpn",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties",
+      "sourceMethod": "getVpn()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "hunter.pool.limit",
+      "type": "java.lang.Integer",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties$Pool",
+      "defaultValue": 200
+    },
+    {
+      "name": "hunter.pool.name",
+      "type": "java.lang.String",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties$Pool",
+      "defaultValue": "proxypool"
+    },
+    {
+      "name": "hunter.sentry.threshold",
+      "type": "java.lang.Integer",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties$Sentry",
+      "defaultValue": 6
+    },
+    {
+      "name": "hunter.sentry.token",
+      "type": "java.lang.String",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties$Sentry"
+    },
+    {
+      "name": "hunter.task.duration",
+      "type": "java.lang.Integer",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties$Task",
+      "defaultValue": 60
+    },
+    {
+      "name": "hunter.vpn.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties$Vpn",
+      "defaultValue": true
+    },
+    {
+      "name": "hunter.vpn.host",
+      "type": "java.lang.String",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties$Vpn",
+      "defaultValue": "127.0.0.1"
+    },
+    {
+      "name": "hunter.vpn.port",
+      "type": "java.lang.Integer",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties$Vpn",
+      "defaultValue": 10809
+    }
+  ],
+  "hints": []
+}

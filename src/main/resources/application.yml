@@ -1,0 +1,29 @@
+spring:
+  main:
+    web-application-type: none
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+
+hunter:
+  vpn:
+    enable: true
+    host: 127.0.0.1
+    port: 10809
+  task:
+    duration: 60
+  pool:
+    name: proxypool
+    limit: 200
+  sentry:
+    enable: true
+    threshold: 6
+    token: 
+
+
+logging:
+  level: {
+    "reactor.netty":error,
+    "me.olook.proxyhunter": info
+  }
