@@ -10,7 +10,7 @@
     </parent>
     <groupId>me.olook</groupId>
     <artifactId>proxy-hunter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
     <name>proxy-hunter</name>
     <description>Demo project for Spring Boot</description>
     <properties>

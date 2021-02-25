@@ -44,6 +44,12 @@
       "defaultValue": "proxypool"
     },
     {
+      "name": "hunter.sentry.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "me.olook.proxyhunter.ProxyHunterProperties$Sentry",
+      "defaultValue": true
+    },
+    {
       "name": "hunter.sentry.threshold",
       "type": "java.lang.Integer",
       "sourceType": "me.olook.proxyhunter.ProxyHunterProperties$Sentry",

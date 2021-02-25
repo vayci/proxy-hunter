@@ -35,9 +35,10 @@ public class ProxyHuntTask implements Runnable{
 
     @Override
     public void run() {
+        if(!isPoolNotFull()){ return; }
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
-        log.info("{} 开始获取",proxyProvider.getClass().getName());
+        log.debug("{} start",proxyProvider.getClass().getName());
         IntStream.rangeClosed(1,10).parallel().forEach(page->{
             String payload = proxyProvider.requestForPayload(page);
             if(payload.contains("Error Request")){
@@ -54,7 +55,16 @@ public class ProxyHuntTask implements Runnable{
             });
         });
         stopWatch.stop();
-        log.info("{} 结束获取，耗时: {} ms",proxyProvider.getClass().getName(),stopWatch.getTotalTimeMillis());
+        log.debug("{} end, cost: {} ms",proxyProvider.getClass().getName(),stopWatch.getTotalTimeMillis());
+    }
+
+    private boolean isPoolNotFull(){
+        int limit = properties.getPool().getLimit();
+        if(limit <= 0){ return true; }
+        Long size = redisTemplate.opsForList().size(properties.getPool().getName());
+        log.info("active proxy pool size: {} , threshold: {}",size,limit);
+        return size != null && size <= limit;
+
     }
 
     private synchronized void notice(String error){
